@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: rgb(22, 22, 24);
+  font-family: 'Poppins',sans-serif;
+  font-weight: 800;
+}
+
+span,
+  .primary-color{
+    background-image: linear-gradient(to right,#dd32f3, #ce90cb);
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+
+  .bg-primary-color{
+    background-image: linear-gradient(to right,#26e074, #ee8c0c );
+  }
