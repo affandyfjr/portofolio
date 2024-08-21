@@ -23,6 +23,8 @@ const Navbar = () => {
           <a href="#About">About</a></li>
         <li className="p-10">
            <a href="#skill">Skill</a></li>
+        <li className="p-10">
+           <a href="#Work">Project</a></li>
       </ul>
 
       <div onClick={handleNav} className="block md:hidden"> 
@@ -37,6 +39,7 @@ const Navbar = () => {
         <li className="p-10">Home</li>
         <li className="p-10">About</li>
         <li className="p-10">Skill</li>
+        <li className="p-10">Project</li>
       </ul>
     </div>
     </div>

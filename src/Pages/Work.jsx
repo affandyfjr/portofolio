@@ -6,7 +6,7 @@ import proj4 from "../assets/proj4.png";
 
 const Work = () => {
   return (
-    <div className="py-6 max-w-[1200px] mx-auto bg-[#232325] ">
+    <div className="py-6 max-w-[1200px] mx-auto bg-[#232325] " id="Work">
       <div className="mx-auto px-4 md:px-8">
         <div className="mb-8 flex items-center justify-center gap-8">
           <div className="flex flex-col gap-4">
