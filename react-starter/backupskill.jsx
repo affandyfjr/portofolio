@@ -171,3 +171,29 @@ function Skill2() {
 }
 
 export default Skill2;
+
+
+-==================
+const handleDelete = (item) => {
+  console.log(`Deleting item with UID: ${item.uid}`); // Tambahkan log untuk memeriksa UID
+
+  const confirmDelete = window.confirm(
+    `yakin ingin dihhapuss "${item.title}" ?`
+  );
+  if (confirmDelete) {
+    remove(ref(db, `/items/${item.uid}`))
+      .then(() => {
+        const updatedTodos = todos.map((item) => {
+          if (item.uid === item.uid) {
+            return { title, todo, image, uid: item.uid };
+          }
+          return item;
+        });
+        setTodos(updatedTodos);
+        console.log(`Successfully deleted item with UID: ${item.title}`);
+      })
+      .catch((error) => {
+        console.error(`Error deleting item with UID: ${item.title}`, error);
+      });
+  }
+};

@@ -1,14 +1,17 @@
 import React, { useContext } from "react";
 import { AuthContext } from "./AuthProvider";
+import { auth } from "../firebase";
+import App from "../App";
+
 import { useNavigate } from "react-router-dom";
-import Skill2 from "../Pages/Skill2";
+
 
 const Admin = () => {
   const { user } = useContext(AuthContext);
   const Navigate = useNavigate();
 
   const handleLogOut = () => {
-    AuthContext.signOut();
+    auth.signOut();
     Navigate("/");
   };
 
@@ -16,7 +19,11 @@ const Admin = () => {
     return <Navigate to="/" />;
   }
 
-  return <Skill2 />;
+  return (
+    <div className="">
+      <App />
+    </div>
+  );
 };
 
 export default Admin;
